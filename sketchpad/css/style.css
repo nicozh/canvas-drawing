@@ -1,6 +1,11 @@
 body {
-    margin: 0
+    height: 100Vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #canva{
-    background: rgb(149, 155, 149);
+    background: rgb(149, 155, 149); 
 }

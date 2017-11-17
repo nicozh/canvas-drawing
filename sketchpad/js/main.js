@@ -1,21 +1,24 @@
 
 
 
-
-
-
-
-
 var canvas = document.getElementById('canva');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
 
+//调整大小
 
-window.onresize=function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+function resize() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	render();
+}
+window.addEventListener('resize', resize, false); resize();
+function render() { // draw to screen here
+}
+
+
+
+
+
 
 
   //点击鼠标
@@ -25,7 +28,6 @@ window.onresize=function(){
   painting=true;
   var x=aa.clientX;
   var y=aa.clientY;
-  drewCrcle(x,y,2);
   lastPoint={x:x,y:y};
     
   };
@@ -65,3 +67,5 @@ window.onresize=function(){
     ctx.closePath();
     ctx.stroke();
  }
+
+ 
