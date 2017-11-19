@@ -1,11 +1,31 @@
-body {
-    height: 100Vh;
+body{
+    text-align: center;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 25px;
+	height: 25px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+.tools{
+    padding: 20px;
+    background: green;
+}
+.tools>span{
+    font-size: 20px;
+}
+.tools>.active{
+     background: red;
 }
 #canva{
-    background: rgb(149, 155, 149); 
+    background: white;
 }

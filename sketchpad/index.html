@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>画板</title>
     <link rel="shortcut icon" href="./img/drew.ico">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="tools">
-        <input type="color" id="colors">
+       
+           <span>画笔颜色：</span>
+           <input type="color" id="colors">
+       
+          <span>画笔宽度：</span>
+          <input type="range" id="width" max="10"   >
+          <span>橡皮擦：</span>
+          <input type="button"  id="e" value="橡皮擦" />
+       
+        
     </div>
-    <canvas id="canva" width:"300" height="300"></canvas>
+    <canvas id="canva" width="400" height="400" style="border:1px solid"></canvas>
     <script src="./js/main.js"></script>
 </body>
 </html>
