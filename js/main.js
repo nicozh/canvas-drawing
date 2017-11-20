@@ -97,9 +97,8 @@ if('ontouchstart' in document.body){
     context.moveTo(x,y);
     
     document.onmousemove=function (ev) {
+        
         //鼠标所在的位置
-        //ev.offsetX
-        //ev.offsetY
         context.lineTo(ev.offsetX,ev.offsetY);
         context.stroke();
          
@@ -137,65 +136,3 @@ clear.onclick=function(){
   }
 
 }
-
-
-
-
-
-
-
-
-
-//*****************下面无关*/
-/*
-  //点击鼠标
- var painting=false;
- var lastPoint={x:undefined,y:undefined};
-  canvas.onmousedown=function(aa){
-  painting=true;
-  var x=aa.offsetX;
-  var y=aa.offsetY;
-  lastPoint={x:x,y:y};
-    
-  };
-// 移动鼠标
-  canvas.onmousemove=function (bb){
-     if(painting){
-       var x=bb.offsetX;
-       var y=bb.offsetY;
-     //  drewCrcle(x,y,5);
-       newPoint={x:x,y:y};
-       drewLine(lastPoint.x,lastPoint.y,newPoint.x,newPoint.y);
-       lastPoint=newPoint;
-     }
-  else{
-    
-  }
- };
-   //松开鼠标
- document.onmouseup=function(xx){
-   painting=false;
- };
- 
-
-  //画圆
- function drewCrcle(x,y,radius){
-  ctx.fillStyle = lineColor.value;
-   ctx.beginPath();
-   ctx.arc(x, y,radius,0,Math.PI*2);
-   ctx.fill();
- }
-  
-  //画路径
- function drewLine(x1,y1,x2,y2){
-    ctx.strokeStyle = lineColor.value;
-   
-    ctx.beginPath();
-    ctx.moveTo(x1,y1);
-    ctx.lineTo(x2,y2);
-    ctx.lineWidth=lineWidth.value;
-    
-    ctx.closePath();
-    ctx.stroke();
- }
- */

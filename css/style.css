@@ -12,7 +12,8 @@ input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
 	width: 25px;
-	height: 25px;
+    height: 25px;
+    margin: 0 30px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -21,10 +22,10 @@ input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
 .tools{
-    padding: 20px;
-    background: rgb(248, 133, 200);
+    padding: 10px;
+    background: rgb(135, 218, 233);
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .tools>span{
     font-size: 20px;
