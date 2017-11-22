@@ -21,6 +21,18 @@ var lineWidth = document.getElementById("width");  //画笔宽度
 var eraser=document.getElementById("e")            //橡皮擦
 var clear=document.getElementById("c")            //清空
 var a=document.getElementById("d")                //下载
+var pen=document.getElementById("pencil")        //画笔
+
+//画笔点击事件
+pen.onclick=function(){
+  if(eraser.className="active"){
+    
+    eraser.className=""
+    canvas.className="pen"
+}
+
+}
+
 
 
 if('ontouchstart' in document.body){
