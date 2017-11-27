@@ -1,5 +1,4 @@
 
-
 var canvas = document.getElementById('canva');
 var context = canvas.getContext('2d');
 
@@ -12,7 +11,6 @@ function setCanvasSize() {
   canvas.width = pageWidth
   canvas.height = pageHeight
 }
-
 
 //用户选择
 
@@ -32,7 +30,6 @@ pen.onclick=function(){
 }
 
 }
-
 
 
 if('ontouchstart' in document.body){
@@ -99,6 +96,8 @@ if('ontouchstart' in document.body){
     context.strokeStyle = lineColor.value;
     //确认线条宽度
     context.lineWidth = lineWidth.value;
+    context.lineJoin = "round";
+    
   
     /*判断用不用橡皮擦*/
     if(eraser.className=="active"){
@@ -117,7 +116,6 @@ if('ontouchstart' in document.body){
     };
          
      document.onmouseup=function () {
-         console.log("onmouseup");
          document.onmousemove=null;
          document.onmouseup =null;
      }

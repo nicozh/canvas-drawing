@@ -13,7 +13,6 @@ input[type="color"] {
 	border: none;
 	width: 25px;
     height: 25px;
-    margin: 0 30px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -24,8 +23,10 @@ input[type="color"]::-webkit-color-swatch {
 .tools{
     padding: 10px;
     background: rgb(135, 218, 233);
-    text-align: center;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .tools>span{
     font-size: 20px;
@@ -34,11 +35,6 @@ input[type="color"]::-webkit-color-swatch {
      color: red;
 }
 .tools svg{
-    width: 30px;
-    height: 30px;
-    padding: 0 30px;
-}
-.tools>a>svg{
     width: 30px;
     height: 30px;
 }
@@ -53,15 +49,18 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /*笔的宽度*/
+
 input[type=range] {
     /*removes default webkit styles*/
     -webkit-appearance: none;
     
     /*fix for FF unable to apply focus style bug */
-    border: 1px solid white;
+    border: 1px solid rgb(22, 22, 22);
     
     /*required for proper track sizing in FF*/
     width: 100px;
+    background: #87DAE9;
+    border-radius: 5px;
 }
 input[type=range]::-webkit-slider-runnable-track {
     width: 300px;
